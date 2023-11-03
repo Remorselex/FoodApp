@@ -2,7 +2,6 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 import React from 'react';
 
-import {} from 'react-native';
 import MainStack from './src/navigation/stack/main/MainStack';
 
 function App(): JSX.Element {
