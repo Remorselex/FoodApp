@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import appReducer from './app/appReducer';
+import appGeoReducer from './app/appGeoReducer';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
   persistReducer,
@@ -12,13 +12,15 @@ import {
   REGISTER,
 } from 'redux-persist';
 
+export type StateType = ReturnType<typeof store.getState>;
+
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
 };
 
 const rootReducer = combineReducers({
-  app: appReducer,
+  appGeo: appGeoReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

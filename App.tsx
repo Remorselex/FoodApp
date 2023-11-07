@@ -1,14 +1,13 @@
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-
 import React from 'react';
-
 import MainStack from './src/navigation/stack/main/MainStack';
+import { Provider } from 'react-redux';
+import { store } from './src/store/store';
 
 function App(): JSX.Element {
   return (
-    <SafeAreaProvider>
+    <Provider store={store}>
       <MainStack />
-    </SafeAreaProvider>
+    </Provider>
   );
 }
 
