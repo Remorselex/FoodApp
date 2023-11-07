@@ -4,8 +4,7 @@ import {StyleSheet, Text, View} from 'react-native';
 const MainScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>Все, хватит пока
-      </Text>
+      <Text>Все, хватит пока</Text>
     </View>
   );
 };
